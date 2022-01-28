@@ -2,7 +2,7 @@ import React from "react";
 
 const ItemsList = ({ items }) => {
     if (!items.length) {
-        return <h3>No Skills Yet</h3>;
+        return <h3>No Items Yet</h3>;
     }
 
     return (

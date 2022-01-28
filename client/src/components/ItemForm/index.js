@@ -24,11 +24,11 @@ const ItemForm = ({ teamId }) => {
 
     return (
         <div>
-            <h4>Endorse some more skills below.</h4>
+            <h4>Add items to deliver.</h4>
             <form className="flex-row justify-center justify-space-between-md align-center" onSubmit={handleFormSubmit}>
                 <div className="col-12 col-lg-9">
                     <input
-                        placeholder="Endorse some skills..."
+                        placeholder="Add items and no of packs or pieces.."
                         value={item}
                         className="form-input w-100"
                         onChange={(event) => setItem(event.target.value)}

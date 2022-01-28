@@ -42,7 +42,7 @@ const TeamForm = () => {
             <form className="flex-row justify-center justify-space-between-md align-center" onSubmit={handleFormSubmit}>
                 <div className="col-12 col-lg-9">
                     <input
-                        placeholder="Add your profile name..."
+                        placeholder="Add the name of delivery person..."
                         value={name}
                         className="form-input w-100"
                         onChange={(event) => setName(event.target.value)}
@@ -51,7 +51,7 @@ const TeamForm = () => {
 
                 <div className="col-12 col-lg-3">
                     <button className="btn btn-info btn-block py-3" type="submit">
-                        Add Driver
+                        Add Employee
                     </button>
                 </div>
                 {error && <div className="col-12 my-3 bg-danger text-white p-3">Something went wrong...</div>}
