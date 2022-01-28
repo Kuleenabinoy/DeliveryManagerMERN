@@ -24,7 +24,7 @@ const TeamList = ({ teams, title }) => {
                                         {team.items && team.items.length === 1 ? "" : "s"} to deliver
                                     </span>
                                     <br />
-                                    <span style={{ fontSize: "1rem" }}>Created at{team.createdAt}</span>
+                                    <span style={{ fontSize: "1rem" }}>Created at {team.createdAt}</span>
                                 </h4>
 
                                 {/* Use <Link> component to create an internal hyperlink reference. Use `to` prop to set the path instead of `href` */}
