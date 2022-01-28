@@ -17,11 +17,7 @@ const Home = () => {
                 </div>
 
                 <div className="col-12 col-md-10 my-3">
-                    {loading ? (
-                        <div>Loading...</div>
-                    ) : (
-                        <TeamList teams={teams} title="Here's the current roster of drivers..." />
-                    )}
+                    {loading ? <div>Loading...</div> : <TeamList teams={teams} title="Items Scheduled for delivery" />}
                 </div>
             </div>
         </main>

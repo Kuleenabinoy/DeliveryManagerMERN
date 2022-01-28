@@ -39,17 +39,19 @@ const TeamForm = () => {
 
     return (
         <div>
-            <h3>Add driver to the list...</h3>
+            <h3>Add employee Information and site address ...</h3>
             <form className="flex-row justify-center justify-space-between-md align-center" onSubmit={handleFormSubmit}>
                 <div className="col-12 col-lg-9">
+                    <label>Employee Name</label>
                     <input
-                        placeholder="Add the name of delivery person and site to deliver..."
+                        placeholder="Add the name of delivery person ..."
                         value={name}
                         className="form-input w-100"
                         onChange={(event) => setName(event.target.value)}
                     />
                 </div>
                 <div className="col-12 col-lg-9">
+                    <label>Site Address</label>
                     <input
                         placeholder="Add site address to deliver..."
                         value={siteInfo}
