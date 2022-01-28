@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Brian ",
+        "skills": ["Item201 - 3 packs", "Item202-1 pack", "Item203-2 packs"]
+    },
+    {
+        "name": "Alex",
+        "skills": ["Item 101", "Item 201"]
+    }
+]
