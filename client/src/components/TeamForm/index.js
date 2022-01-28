@@ -7,6 +7,7 @@ import { QUERY_TEAMS } from "../../utils/queries";
 const TeamForm = () => {
     const [name, setName] = useState("");
     const [siteInfo, setSiteInfo] = useState("");
+    const [email, setEmail] = useState("");
     const [addTeam, { error }] = useMutation(ADD_TEAM, {
         update(cache, { data: { addTeam } }) {
             try {
@@ -27,11 +28,12 @@ const TeamForm = () => {
 
         try {
             const { data } = await addTeam({
-                variables: { name, siteInfo },
+                variables: { name, siteInfo, email },
             });
 
             setName("");
             setSiteInfo("");
+            setEmail("");
         } catch (err) {
             console.error(err);
         }
@@ -48,6 +50,15 @@ const TeamForm = () => {
                         value={name}
                         className="form-input w-100"
                         onChange={(event) => setName(event.target.value)}
+                    />
+                </div>
+                <div className="col-12 col-lg-9">
+                    <label>Employee Email</label>
+                    <input
+                        placeholder="Add the email of delivery person ..."
+                        value={email}
+                        className="form-input w-100"
+                        onChange={(event) => setEmail(event.target.value)}
                     />
                 </div>
                 <div className="col-12 col-lg-9">

@@ -2,11 +2,13 @@
     {
         "name": "Brian ",
         "siteInfo": "18 GWH,NSW 2146",
+        "email": "brian@naf.com",
         "items": ["Item201 - 3 packs", "Item202-1 pack", "Item203-2 packs"]
     },
     {
         "name": "Alex",
         "siteInfo": "23 Central Road,NSW 2134",
+        "email": "alex@naf.com",
         "items": ["Item 101", "Item 201"]
     }
 ]

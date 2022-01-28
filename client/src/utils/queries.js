@@ -6,6 +6,8 @@ export const QUERY_TEAMS = gql`
             _id
             name
             siteInfo
+            email
+            createdAt
             items
         }
     }
@@ -17,6 +19,8 @@ export const QUERY_SINGLE_TEAM = gql`
             _id
             name
             siteInfo
+            email
+            createdAt
             items
         }
     }
