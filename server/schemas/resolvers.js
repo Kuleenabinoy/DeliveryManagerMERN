@@ -12,8 +12,8 @@ const resolvers = {
     },
 
     Mutation: {
-        addTeam: async (parent, { name, siteInfo }) => {
-            return Team.create({ name, siteInfo });
+        addTeam: async (parent, { name, siteInfo, email }) => {
+            return Team.create({ name, siteInfo, email });
         },
         addItem: async (parent, { teamId, item }) => {
             return Team.findOneAndUpdate(

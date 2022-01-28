@@ -25,6 +25,7 @@ const Team = () => {
     }
     return (
         <div>
+            <h2 className="card-header">Deliver Note created At {team.createdAt}</h2>
             <h2 className="card-header">Deliver to {team.siteInfo}</h2>
             <h2 className="card-header">{team.name}'s items to pick from warehouse...</h2>
 

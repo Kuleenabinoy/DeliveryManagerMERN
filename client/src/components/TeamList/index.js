@@ -17,10 +17,14 @@ const TeamList = ({ teams, title }) => {
                             <div className="card mb-3">
                                 <h4 className="card-header bg-dark text-light p-2 m-0">
                                     {team.name} <br />
+                                    {team.email}
+                                    <br />
                                     <span className="text-white" style={{ fontSize: "1rem" }}>
                                         currently has {team.items ? team.items.length : 0} item
                                         {team.items && team.items.length === 1 ? "" : "s"} to deliver
                                     </span>
+                                    <br />
+                                    <span style={{ fontSize: "1rem" }}>Created at{team.createdAt}</span>
                                 </h4>
 
                                 {/* Use <Link> component to create an internal hyperlink reference. Use `to` prop to set the path instead of `href` */}
