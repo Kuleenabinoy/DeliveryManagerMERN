@@ -7,6 +7,12 @@ const teamSchema = new Schema({
         unique: true,
         trim: true,
     },
+    siteInfo: {
+        type: String,
+        required: true,
+        unique: true,
+        trim: true,
+    },
     items: [
         {
             type: String,
