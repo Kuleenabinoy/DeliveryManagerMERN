@@ -4,6 +4,7 @@ const typeDefs = gql`
     type Team {
         _id: ID
         name: String
+        siteInfo: String
         items: [String]!
     }
 
@@ -13,7 +14,7 @@ const typeDefs = gql`
     }
 
     type Mutation {
-        addTeam(name: String!): Team
+        addTeam(name: String!, siteInfo: String!): Team
         addItem(teamId: ID!, item: String!): Team
         removeTeam(teamId: ID!): Team
         removeItem(teamId: ID!, item: String!): Team

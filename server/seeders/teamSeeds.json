@@ -1,10 +1,12 @@
 [
     {
         "name": "Brian ",
-        "skills": ["Item201 - 3 packs", "Item202-1 pack", "Item203-2 packs"]
+        "siteInfo": "18 GWH,NSW 2146",
+        "items": ["Item201 - 3 packs", "Item202-1 pack", "Item203-2 packs"]
     },
     {
         "name": "Alex",
-        "skills": ["Item 101", "Item 201"]
+        "siteInfo": "23 Central Road,NSW 2134",
+        "items": ["Item 101", "Item 201"]
     }
 ]

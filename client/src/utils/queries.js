@@ -5,6 +5,7 @@ export const QUERY_TEAMS = gql`
         teams {
             _id
             name
+            siteInfo
             items
         }
     }
@@ -15,6 +16,7 @@ export const QUERY_SINGLE_TEAM = gql`
         team(teamId: $teamId) {
             _id
             name
+            siteInfo
             items
         }
     }

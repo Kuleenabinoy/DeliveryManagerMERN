@@ -18,7 +18,7 @@ const TeamList = ({ teams, title }) => {
                                 <h4 className="card-header bg-dark text-light p-2 m-0">
                                     {team.name} <br />
                                     <span className="text-white" style={{ fontSize: "1rem" }}>
-                                        currently has {team.items ? team.items.length : 0} items
+                                        currently has {team.items ? team.items.length : 0} item
                                         {team.items && team.items.length === 1 ? "" : "s"} to deliver
                                     </span>
                                 </h4>
