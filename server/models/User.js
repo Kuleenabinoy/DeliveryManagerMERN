@@ -8,7 +8,7 @@ const userSchema = new Schema({
         unique: true,
         trim: true,
     },
-    email: {
+    useremail: {
         type: String,
         required: true,
         unique: true,
@@ -19,7 +19,7 @@ const userSchema = new Schema({
         required: true,
         minlength: 5,
     },
-    employeeCategory: {
+    usercategory: {
         type: String,
         required: true,
         trim: true,

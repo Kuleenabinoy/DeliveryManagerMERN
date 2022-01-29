@@ -12,8 +12,8 @@ const typeDefs = gql`
     type User {
         _id: ID
         username: String
-        email: String
-        employeeCategory: String
+        useremail: String
+        usercategory: String
         password: String
         teams: [Team]!
     }
@@ -23,16 +23,16 @@ const typeDefs = gql`
     }
     type Query {
         users: [User]
-        user(username: String!, employeeCategory: String!): User
+        user(username: String!, usercategory: String!): User
         teams(username: String): Team
-        teams: [Team]!
+
         team(teamId: ID!): Team
         me: User
     }
 
     type Mutation {
-        addUser(username: String!, email: String!, password: String!, employeeCategory: String!): Auth
-        login(email: String!, password: String!, employeeCategory: String!): Auth
+        addUser(username: String!, useremail: String!, password: String!, usercategory: String!): Auth
+        login(useremail: String!, password: String!, usercategory: String!): Auth
         addTeam(name: String!, siteInfo: String!, email: String!): Team
         addItem(teamId: ID!, item: String!): Team
         removeTeam(teamId: ID!): Team
@@ -41,3 +41,4 @@ const typeDefs = gql`
 `;
 
 module.exports = typeDefs;
+// teams: [Team]!
