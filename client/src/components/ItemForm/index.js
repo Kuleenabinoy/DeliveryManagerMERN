@@ -2,7 +2,13 @@ import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 
 import { ADD_ITEM } from "../../utils/mutations";
-
+const styles = {
+    btnStyle: {
+        background: "#505d8c",
+        cursor: "pointer",
+        color: "black",
+    },
+};
 const ItemForm = ({ teamId }) => {
     const [item, setItem] = useState("");
 
@@ -36,7 +42,7 @@ const ItemForm = ({ teamId }) => {
                 </div>
 
                 <div className="col-12 col-lg-3">
-                    <button className="btn btn-info btn-block py-3" type="submit">
+                    <button style={styles.btnStyle} className="btn btn-info btn-block py-3" type="submit">
                         Add Item
                     </button>
                 </div>
