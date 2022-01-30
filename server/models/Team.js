@@ -4,13 +4,13 @@ const teamSchema = new Schema({
     name: {
         type: String,
         required: true,
-        unique: true,
+        unique: false,
         trim: true,
     },
     siteInfo: {
         type: String,
         required: true,
-        unique: true,
+        unique: false,
         trim: true,
     },
     email: {

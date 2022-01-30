@@ -6,6 +6,7 @@ const userSeeds = require("./userSeeds.json");
 db.once("open", async () => {
     try {
         await Team.deleteMany({});
+        await User.deleteMany({});
         await Team.create(teamSeeds);
         await User.create(userSeeds);
 

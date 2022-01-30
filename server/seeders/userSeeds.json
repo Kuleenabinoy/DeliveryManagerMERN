@@ -6,15 +6,9 @@
         "usercategory": "manager"
     },
     {
-        "username": "Brian",
-        "useremail": "brian@naf.com",
-        "password": "brian1234",
-        "usercategory": "employee"
-    },
-    {
-        "username": "Alex",
-        "useremail": "alex@naf.com",
-        "password": "alex1234",
+        "username": "abc",
+        "useremail": "abc@naf.com",
+        "password": "abc1234",
         "usercategory": "employee"
     }
 ]
