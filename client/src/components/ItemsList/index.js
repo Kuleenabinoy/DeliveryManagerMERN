@@ -10,9 +10,9 @@ const ItemsList = ({ items }) => {
             <div className="flex-row justify-space-between my-4">
                 {items &&
                     items.map((item) => (
-                        <div key={item} className="col-12 col-xl-6">
+                        <div key={item} className=" col-12 col-xl-6">
                             <div className="card mb-3">
-                                <h4 className="card-header bg-dark text-light p-2 m-0">
+                                <h4 className=" card-header bg-dark text-light p-2 m-0">
                                     {item} <br />
                                 </h4>
                             </div>
