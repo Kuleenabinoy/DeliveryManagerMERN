@@ -1,18 +1,31 @@
+import { left } from "@popperjs/core";
 import React from "react";
 // Import React Router Link component for internal hyperlinks
 import { Link } from "react-router-dom";
 import Auth from "../../utils/auth";
+const styles = {
+    headerStyle: {
+        background: "#505d8c",
+        margin: 5,
+    },
+    headingStyle: {
+        align: left,
+        margin: 20,
+    },
+};
 const Header = () => {
     const logout = (event) => {
         event.preventDefault();
         Auth.logout();
     };
     return (
-        <header className="bg-info text-dark mb-4 py-3 display-flex align-center">
-            <div className="container flex-column justify-space-between-lg justify-center align-center text-center">
+        // <header className="bg-info text-dark mb-4 py-3 display-flex align-center">
+        <header style={styles.headerStyle} className="header">
+            <div style={styles.headingStyle} className="heading">
+                {/* <div className="container flex-column justify-space-between-lg justify-center align-center text-center"> */}
                 {/* Use Link component to create a link that returns to the homepage on click */}
                 <Link className="text-dark" to="/">
-                    <h1 className="m-0" style={{ fontSize: "3rem" }}>
+                    <h1 className="m-0" style={{ fontSize: "2rem" }}>
                         Delivery Manager
                     </h1>
                 </Link>

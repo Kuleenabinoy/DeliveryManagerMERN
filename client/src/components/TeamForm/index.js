@@ -4,6 +4,14 @@ import { useMutation } from "@apollo/client";
 import { ADD_TEAM } from "../../utils/mutations";
 import { QUERY_TEAMS } from "../../utils/queries";
 //if admin login show this form
+const styles = {
+    btnStyle: {
+        background: "#505d8c",
+        cursor: "pointer",
+        color: "black",
+    },
+};
+
 const TeamForm = () => {
     const [name, setName] = useState("");
     const [siteInfo, setSiteInfo] = useState("");
@@ -48,7 +56,7 @@ const TeamForm = () => {
                     <input
                         placeholder="Add the name of delivery person ..."
                         value={name}
-                        className="form-input w-100"
+                        className="form-input w-50"
                         onChange={(event) => setName(event.target.value)}
                     />
                 </div>
@@ -57,7 +65,7 @@ const TeamForm = () => {
                     <input
                         placeholder="Add the email of delivery person ..."
                         value={email}
-                        className="form-input w-100"
+                        className="form-input w-50"
                         onChange={(event) => setEmail(event.target.value)}
                     />
                 </div>
@@ -66,13 +74,13 @@ const TeamForm = () => {
                     <input
                         placeholder="Add site address to deliver..."
                         value={siteInfo}
-                        className="form-input w-100"
+                        className="form-input w-50"
                         onChange={(event) => setSiteInfo(event.target.value)}
                     />
                 </div>
                 <div className="col-12 col-lg-3">
-                    <button className="btn btn-info btn-block py-3" type="submit">
-                        Add Delivery Note
+                    <button style={styles.btnStyle} className="btn btn-info btn-block py-3" type="submit">
+                        Add Employee
                     </button>
                 </div>
                 {error && <div className="col-12 my-3 bg-danger text-white p-3">Something went wrong...</div>}

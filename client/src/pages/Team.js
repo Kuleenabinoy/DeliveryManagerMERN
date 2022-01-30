@@ -8,7 +8,11 @@ import ItemsList from "../components/ItemsList";
 import ItemForm from "../components/ItemForm";
 
 import { QUERY_SINGLE_TEAM } from "../utils/queries";
-
+const styles = {
+    cardStyle: {
+        margin: 5,
+    },
+};
 const Team = () => {
     // Use `useParams()` to retrieve value of the route parameter `:profileId`
     const { teamId } = useParams();
