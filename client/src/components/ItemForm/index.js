@@ -7,6 +7,7 @@ const styles = {
         background: "#505d8c",
         cursor: "pointer",
         color: "black",
+        margin: 5,
     },
 };
 const ItemForm = ({ teamId }) => {
@@ -48,6 +49,14 @@ const ItemForm = ({ teamId }) => {
                 </div>
                 {error && <div className="col-12 my-3 bg-danger text-white p-3">Something went wrong...</div>}
             </form>
+            <div className="email">
+                <button className="btn " style={styles.btnStyle}>
+                    Generate Random Number
+                </button>
+                <button className="btn " style={styles.btnStyle}>
+                    Email Customer
+                </button>
+            </div>
         </div>
     );
 };
