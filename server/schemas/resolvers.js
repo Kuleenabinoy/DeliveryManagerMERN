@@ -32,6 +32,8 @@ const resolvers = {
             return { token, user };
         },
         login: async (parent, { useremail, password, usercategory }) => {
+            console.log("user", useremail, password, usercategory);
+            //usercategory = "manager";
             const user = await User.findOne({ useremail, usercategory });
 
             if (!user) {

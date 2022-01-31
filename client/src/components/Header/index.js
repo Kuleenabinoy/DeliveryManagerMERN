@@ -33,11 +33,19 @@ const Header = () => {
                     Manage Site Delivery.
                 </p>
                 <div>
+                    {/* {console.log("Auth.getProfile().data", Auth.getProfile().data)} */}
                     {Auth.loggedIn() ? (
                         <>
                             <Link className="btn btn-lg btn-info m-2" to="/me">
                                 {Auth.getProfile().data.username}'s profile
                             </Link>
+                            {Auth.getProfile().data.usercategory === "manager" ? (
+                                <Link className="btn btn-lg btn-info m-2" to="/me">
+                                    Add profiles
+                                </Link>
+                            ) : (
+                                ""
+                            )}
                             <button className="btn btn-lg btn-light m-2" onClick={logout}>
                                 Logout
                             </button>

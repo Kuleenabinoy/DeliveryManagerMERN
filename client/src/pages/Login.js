@@ -6,7 +6,7 @@ import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
 
 const Login = (props) => {
-    const [formState, setFormState] = useState({ useremail: "", password: "", usercategory: "" });
+    const [formState, setFormState] = useState({ useremail: "", password: "", usercategory: "manager" });
     const [login, { error, data }] = useMutation(LOGIN_USER);
 
     // update state based on form input changes
@@ -29,6 +29,7 @@ const Login = (props) => {
             });
 
             Auth.login(data.login.token);
+            window.location.assign("/admin");
         } catch (e) {
             console.error(e);
         }
@@ -37,7 +38,6 @@ const Login = (props) => {
         setFormState({
             usercategory: "",
             email: "",
-
             password: "",
         });
     };

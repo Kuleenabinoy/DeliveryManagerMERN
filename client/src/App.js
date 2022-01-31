@@ -33,12 +33,12 @@ function App() {
                         <Route exact path="/signup">
                             <Signup />
                         </Route>
-                        <Route exact path="/profiles/:username">
+                        {/* <Route exact path="/profiles/:username">
                             <Profile />
-                        </Route>
-                        <Route exact path="/me">
+                        </Route> */}
+                        {/* <Route exact path="/me">
                             <Profile />
-                        </Route>
+                        </Route> */}
                         {/* Define a route that will take in variable data */}
                         <Route exact path="/teams/:teamId">
                             <Team />
