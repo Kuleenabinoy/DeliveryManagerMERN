@@ -1,0 +1,14 @@
+[
+    {
+        "username": "manager",
+        "useremail": "manager@naf.com",
+        "password": "manager1234",
+        "usercategory": "manager"
+    },
+    {
+        "username": "abc",
+        "useremail": "abc@naf.com",
+        "password": "abc1234",
+        "usercategory": "employee"
+    }
+]

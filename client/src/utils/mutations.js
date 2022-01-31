@@ -23,3 +23,28 @@ export const ADD_ITEM = gql`
         }
     }
 `;
+export const LOGIN_USER = gql`
+    mutation login($useremail: String!, $password: String!, $usercategory: String!) {
+        login(useremail: $useremail, password: $password, usercategory: $usercategory) {
+            token
+            user {
+                _id
+                username
+                usercategory
+            }
+        }
+    }
+`;
+
+export const ADD_USER = gql`
+    mutation addUser($username: String!, $useremail: String!, $password: String!, $usercategory: String!) {
+        addUser(username: $username, useremail: $useremail, password: $password, usercategory: $usercategory) {
+            token
+            user {
+                _id
+                username
+                usercategory
+            }
+        }
+    }
+`;

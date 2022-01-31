@@ -3,6 +3,7 @@ import { useMutation } from "@apollo/client";
 
 import { ADD_TEAM } from "../../utils/mutations";
 import { QUERY_TEAMS } from "../../utils/queries";
+//if admin login show this form
 const styles = {
     btnStyle: {
         background: "#505d8c",

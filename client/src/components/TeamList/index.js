@@ -9,7 +9,8 @@ const styles = {
 };
 const TeamList = ({ teams, title }) => {
     if (!teams.length) {
-        return <h3>No Profiles Yet</h3>;
+        console.log(teams.length, "teamslength");
+        return <h3>No Employee Added </h3>;
     }
 
     return (

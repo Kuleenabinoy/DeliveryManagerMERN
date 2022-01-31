@@ -4,8 +4,11 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Team from "./pages/Team";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Profile from "./pages/Profile";
 
 const client = new ApolloClient({
     uri: "/graphql",
@@ -21,9 +24,21 @@ function App() {
                     <Header />
                     <div className="container">
                         {/* Define routes to render different page components at different paths */}
-                        <Route exact path="/">
+                        <Route exact path="/admin">
                             <Home />
                         </Route>
+                        <Route exact path="/login">
+                            <Login />
+                        </Route>
+                        <Route exact path="/signup">
+                            <Signup />
+                        </Route>
+                        {/* <Route exact path="/profiles/:username">
+                            <Profile />
+                        </Route> */}
+                        {/* <Route exact path="/me">
+                            <Profile />
+                        </Route> */}
                         {/* Define a route that will take in variable data */}
                         <Route exact path="/teams/:teamId">
                             <Team />
