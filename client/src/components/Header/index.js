@@ -1,4 +1,3 @@
-import { left } from "@popperjs/core";
 import React from "react";
 // Import React Router Link component for internal hyperlinks
 import { Link } from "react-router-dom";
@@ -9,7 +8,7 @@ const styles = {
         margin: 5,
     },
     headingStyle: {
-        align: left,
+        align: "left",
         margin: 20,
     },
 };
@@ -29,9 +28,7 @@ const Header = () => {
                         Delivery Manager
                     </h1>
                 </Link>
-                <p className="m-0" style={{ fontSize: "1.75rem", fontWeight: "700" }}>
-                    Manage Site Delivery.
-                </p>
+
                 <div>
                     {/* {console.log("Auth.getProfile().data", Auth.getProfile().data)} */}
                     {Auth.loggedIn() ? (
