@@ -26,14 +26,15 @@ const Signup = () => {
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-        console.log(formState);
+        console.log(formState, "signup values");
 
         try {
             const { data } = await addUser({
                 variables: { ...formState },
             });
-
+            //new code added here
             Auth.login(data.addUser.token);
+            // window.location.assign("/admin");
         } catch (e) {
             console.error(e);
         }
@@ -47,7 +48,8 @@ const Signup = () => {
                     <div className="card-body">
                         {data ? (
                             <p>
-                                Success! You may now head <Link to="/">back to the homepage.</Link>
+                                Success Created a new member to your team! You may now head{" "}
+                                <Link to="/admin">back to the admin page to add items.</Link>
                             </p>
                         ) : (
                             <form onSubmit={handleFormSubmit}>
@@ -98,7 +100,7 @@ const Signup = () => {
                                     onChange={handleChange}
                                 />
                                 <button className="btn btn-block btn-primary" style={{ cursor: "pointer" }} type="submit">
-                                    Submit
+                                    Sign Up
                                 </button>
                             </form>
                         )}

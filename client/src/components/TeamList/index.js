@@ -9,7 +9,7 @@ const styles = {
 };
 const TeamList = ({ teams, title }) => {
     if (!teams.length) {
-        console.log(teams.length, "teamslength");
+        // console.log(teams.length, "teamslength");
         return <h3>No Employee Added </h3>;
     }
 

@@ -9,7 +9,7 @@ import { QUERY_TEAMS } from "../utils/queries";
 const Home = () => {
     const { loading, data } = useQuery(QUERY_TEAMS);
     const teams = data?.teams || [];
-    console.log(teams.length, "teams length in home page");
+
     return (
         <main>
             <div className="flex-row justify-center">
