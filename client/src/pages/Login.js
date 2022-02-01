@@ -27,9 +27,16 @@ const Login = (props) => {
             const { data } = await login({
                 variables: { ...formState },
             });
-
+            console.log("data", data);
             Auth.login(data.login.token);
-            window.location.assign("/admin");
+            if (data.usercategory === "employee") {
+                alert("employee");
+                window.location.assign("/profile");
+            } else {
+                alert("manager");
+                window.location.assign("/admin");
+            }
+            // window.location.assign("/admin");
         } catch (e) {
             console.error(e);
         }
