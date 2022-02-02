@@ -8,6 +8,7 @@ export const ADD_TEAM = gql`
             siteInfo
             email
             createdAt
+
             items
         }
     }
@@ -19,6 +20,7 @@ export const ADD_ITEM = gql`
             _id
             name
             siteInfo
+
             items
         }
     }
