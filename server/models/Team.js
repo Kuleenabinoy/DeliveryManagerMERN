@@ -24,6 +24,7 @@ const teamSchema = new Schema({
         default: Date.now,
         get: (timestamp) => dateFormat(timestamp),
     },
+
     items: [
         {
             type: String,

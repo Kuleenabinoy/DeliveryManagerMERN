@@ -3,7 +3,7 @@ import React from "react";
 // Import the `useParams()` hook
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
-
+import { useRef } from "react";
 import ItemsList from "../components/ItemsList";
 import ItemForm from "../components/ItemForm";
 
@@ -25,7 +25,15 @@ const Team = () => {
             margin: 5,
         },
     };
+    const textAreaEl = useRef(null);
+    const randomNo = () => {
+        const min = 100;
+        const max = 100000;
+        const rNo = Math.floor(Math.random() * (max - min + 1)) + min;
+        console.log(rNo);
 
+        textAreaEl.current.value = rNo;
+    };
     const team = data?.team || {};
 
     if (loading) {
@@ -44,9 +52,13 @@ const Team = () => {
             </div>
             <div className="col-12 col-lg-9 ">
                 <div className="email">
-                    <button className="btn " style={styles.btnStyle}>
+                    <button className="btn btn-info  py-3" style={styles.btnStyle}>
                         Email Customer/DeliveryPerson
                     </button>
+                    <button className="btn btn-info  py-3 " style={styles.btnStyle} onClick={randomNo}>
+                        Generate Code
+                    </button>
+                    <textarea ref={textAreaEl} />
                 </div>
             </div>
         </div>
