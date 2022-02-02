@@ -36,7 +36,6 @@ const Login = (props) => {
             } else {
                 window.location.assign("/admin");
             }
-            // window.location.assign("/admin");
         } catch (e) {
             console.error(e);
         }
