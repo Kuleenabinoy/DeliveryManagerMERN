@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 
 import { ADD_ITEM } from "../../utils/mutations";
+
 const styles = {
     btnStyle: {
         background: "#505d8c",
@@ -9,6 +10,12 @@ const styles = {
         color: "black",
         margin: 5,
     },
+};
+const randomNo = () => {
+    const min = 100;
+    const max = 100000;
+    const rNo = Math.floor(Math.random() * (max - min + 1)) + min;
+    console.log(rNo);
 };
 const ItemForm = ({ teamId }) => {
     const [item, setItem] = useState("");
@@ -46,17 +53,12 @@ const ItemForm = ({ teamId }) => {
                     <button style={styles.btnStyle} className="btn btn-info btn-block py-3" type="submit">
                         Add Item
                     </button>
+                    <button className="btn btn-info btn-block py-3 " style={styles.btnStyle} onClick={randomNo}>
+                        Generate Code
+                    </button>
                 </div>
                 {error && <div className="col-12 my-3 bg-danger text-white p-3">Something went wrong...</div>}
             </form>
-            <div className="email">
-                <button className="btn " style={styles.btnStyle}>
-                    Generate Random Number
-                </button>
-                <button className="btn " style={styles.btnStyle}>
-                    Email Customer
-                </button>
-            </div>
         </div>
     );
 };

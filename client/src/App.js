@@ -43,10 +43,10 @@ function App() {
                         {/* <Route exact path="/employee">
                             <HomeEmployee />
                         </Route> */}
-                        <Route exact path="/me">
+                        <Route exact path="/profile">
                             <Profile />
                         </Route>
-                        <Route exact path="/profiles/:username">
+                        <Route exact path="/me">
                             <Profile />
                         </Route>
                         {/* <Route exact path="/addteam">
