@@ -3,8 +3,8 @@ import React from "react";
 import { Redirect, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
-//import ItemsList from "../components/ItemsList";
-//import ItemForm from "../components/ItemForm";
+//import ProfileForm from "../components/ItemsList";
+import ProfileList from "../components/ItemForm";
 
 import { QUERY_USER, QUERY_ME } from "../utils/queries";
 
@@ -20,11 +20,12 @@ const Profile = () => {
 
     // Check if data is returning from the `QUERY_ME` query, then the `QUERY_SINGLE_PROFILE` query
     const user = data?.me || data?.user || {};
-
+    console.log(user);
     // Use React Router's `<Redirect />` component to redirect to personal profile page if username is yours
     if (Auth.loggedIn() && Auth.getProfile().data.username) {
         return <Redirect to="/me" />;
     }
+    console.log(data.user.username, "usename");
 
     if (loading) {
         return <div>Loading...</div>;
@@ -36,7 +37,13 @@ const Profile = () => {
 
     return (
         <div>
-            <h2>Employee Page</h2>
+            <div>
+                <h2 className="card-header">Deliver Note created At {user.createdAt}</h2>
+                <h2 className="card-header">Deliver to {user.siteInfo}</h2>
+                <h2 className="card-header">{user.name}'s items to pick from warehouse...</h2>
+
+                {user.items?.length > 0 && <ProfileList items={user.items} />}
+            </div>
         </div>
     );
 };

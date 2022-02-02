@@ -17,6 +17,14 @@ const Team = () => {
         // pass URL parameter
         variables: { teamId: teamId },
     });
+    const styles = {
+        btnStyle: {
+            background: "#505d8c",
+            cursor: "pointer",
+            color: "black",
+            margin: 5,
+        },
+    };
 
     const team = data?.team || {};
 
@@ -33,6 +41,13 @@ const Team = () => {
 
             <div className="my-4 p-4" style={{ border: "1px dotted #1a1a1a" }}>
                 <ItemForm teamId={team._id} />
+            </div>
+            <div className="col-12 col-lg-9 ">
+                <div className="email">
+                    <button className="btn " style={styles.btnStyle}>
+                        Email Customer/DeliveryPerson
+                    </button>
+                </div>
             </div>
         </div>
     );

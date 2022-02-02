@@ -23,14 +23,12 @@ const Login = (props) => {
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         console.log(formState, "login values");
-
         try {
             const { data } = await login({
                 variables: { ...formState },
             });
 
             Auth.login(data.login.token);
-            //load admin page if admin login,if employee login load employee profile
             if (data.login.user.usercategory === "employee") {
                 window.location.assign("/profile");
             } else {
