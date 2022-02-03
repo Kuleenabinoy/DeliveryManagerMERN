@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Profile from "./pages/Profile";
+import Email from "./pages/Email";
 //import HomeEmployee from "./pages/HomeEmployee";
 
 const client = new ApolloClient({
@@ -49,9 +50,9 @@ function App() {
                         <Route exact path="/me">
                             <Profile />
                         </Route>
-                        {/* <Route exact path="/addteam">
-                            <Home />
-                        </Route> */}
+                        <Route exact path="/email">
+                            <Email />
+                        </Route>
 
                         {/* Define a route that will take in variable data */}
                         <Route exact path="/teams/:teamId">
