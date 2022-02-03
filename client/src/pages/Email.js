@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-
+import { init } from "@emailjs/browser";
+init("user_Xp4pYLGsMh94eExog19XF");
 const styles = {
     btnStyle: {
         background: "#505d8c",
@@ -28,6 +29,7 @@ const Email = () => {
             (result) => {
                 console.log(result.text);
                 alert("Email Sent Sucessfully");
+                window.location.reload();
             },
             (error) => {
                 console.log(error.text);
@@ -69,7 +71,7 @@ const Email = () => {
                 <textarea name="siteaddress" />
                 <br />
                 <br></br>
-                <input type="submit" value="Send" />
+                <input style={styles.btnStyle} className="btn btn-info  py-3 " type="submit" value="Send" />
             </form>
             <div>
                 <button className="btn btn-info  py-3 " style={styles.btnStyle} onClick={randomNo}>
