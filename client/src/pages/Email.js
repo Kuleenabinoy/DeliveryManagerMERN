@@ -49,7 +49,7 @@ const Email = () => {
                 <br></br> <label>Customer Email</label>
                 <input type="email" name="email" />
                 <br />
-                <label>Delivery Person</label>
+                {/* <label>Delivery Person</label>
                 <input type="text" name="deliveryperson" />
                 <br />
                 <label>Delivery Person Email</label>
@@ -68,7 +68,7 @@ const Email = () => {
                 <label>Site Address </label>
                 <textarea name="siteaddress" />
                 <br />
-                <br></br>
+                <br></br> */}
                 <input type="submit" value="Send" />
             </form>
             <div>
