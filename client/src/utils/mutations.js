@@ -59,3 +59,14 @@ export const REMOVE_ITEM = gql`
         }
     }
 `;
+export const REMOVE_TEAM = gql`
+    mutation removeTeam($team: String!) {
+        removeTeam(team: $team) {
+            _id
+            name
+            siteInfo
+            createdAt
+            items
+        }
+    }
+`;
