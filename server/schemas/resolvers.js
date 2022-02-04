@@ -1,5 +1,5 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { Team, User } = require("../models");
+const { User, Team } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
@@ -10,8 +10,10 @@ const resolvers = {
         user: async (parent, { username }) => {
             return User.findOne({ username }).populate("teams");
         },
-        teams: async () => {
-            return Team.find();
+        //changes happing  in this query  to get single employee
+        teams: async (parent, { username }) => {
+            const params = username ? { username } : {};
+            return Team.find(params);
         },
 
         team: async (parent, { teamId }) => {
@@ -23,6 +25,7 @@ const resolvers = {
                 // const userData = await User.findOne({ _id: context.user._id }).select("-__v -password");
                 // return userData;
             }
+
             throw new AuthenticationError("You need to be logged in!");
         },
     },

@@ -14,8 +14,8 @@ const Employee = () => {
     const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
         variables: { username: user.username },
     });
-
-    console.log(user, "user");
+    debugger;
+    console.log("username", user.username);
 
     console.log("data", data);
 
@@ -34,7 +34,7 @@ const Employee = () => {
                 <h2>Your Email {user.useremail}</h2>
                 <h2>Your are a registered {user.usercategory} with Naf Construction Supplies.</h2>
                 <h3>Items Scheduled for you for delivery</h3>
-                <h4>DeliveryOrder Created At</h4>
+                <h4>Delivery Order Created At</h4>
                 <h4>Site Address</h4>
                 <h4>Items</h4>
             </div>
