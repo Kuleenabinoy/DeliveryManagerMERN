@@ -73,6 +73,9 @@ const resolvers = {
         removeTeam: async (parent, { teamId }) => {
             return Team.findOneAndDelete({ _id: teamId });
         },
+        // removeItem: async (parent, { teamId, item }) => {
+        //     return Team.findOneAndUpdate({ _id: teamId }, { $pull: { items: item } }, { new: true });
+        // },
         removeItem: async (parent, { teamId, item }) => {
             return Team.findOneAndUpdate({ _id: teamId }, { $pull: { items: item } }, { new: true });
         },

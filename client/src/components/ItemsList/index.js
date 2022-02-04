@@ -2,7 +2,7 @@ import React from "react";
 import { useMutation } from "@apollo/client";
 import { REMOVE_ITEM } from "../../utils/mutations";
 import { QUERY_ME } from "../../utils/queries";
-const ItemsList = ({ items, isLoggedInUser = false }) => {
+const ItemsList = ({ items }) => {
     const [removeItem, { error }] = useMutation(REMOVE_ITEM, {
         update(cache, { data: { removeItem } }) {
             try {
@@ -37,14 +37,12 @@ const ItemsList = ({ items, isLoggedInUser = false }) => {
                             <div className="card mb-3">
                                 <h4 className=" card-header  text-light p-2 m-0">
                                     {item} <br />
-                                    {isLoggedInUser && (
-                                        <button
-                                            className="btn btn-sm btn-danger ml-auto"
-                                            onClick={() => handleRemoveItem(item)}
-                                        >
-                                            X
-                                        </button>
-                                    )}
+                                    <button
+                                        className="btn btn-sm btn-danger ml-auto"
+                                        onClick={() => handleRemoveItem(item)}
+                                    >
+                                        Delete
+                                    </button>
                                 </h4>
                             </div>
                         </div>

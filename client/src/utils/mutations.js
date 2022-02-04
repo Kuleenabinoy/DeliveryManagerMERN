@@ -54,8 +54,20 @@ export const REMOVE_ITEM = gql`
     mutation removeItem($item: String!) {
         removeItem(item: $item) {
             _id
-            name
             items
         }
     }
 `;
+export const REMOVE_TEAM = gql`
+    mutation removeTeam($team: String!) {
+        removeTeam(team: $team) {
+            _id
+            name
+            siteInfo
+            createdAt
+            items
+        }
+    }
+`;
+//_id
+//   name

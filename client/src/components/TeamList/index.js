@@ -1,14 +1,17 @@
 import React from "react";
-
+//import { REMOVE_TEAM } from "../../utils/mutations";
 // Import Link component for all internal application hyperlinks
 import { Link } from "react-router-dom";
+//import { useMutation } from "@apollo/client";
+//import { QUERY_TEAMS } from "../../utils/queries";
+
 const styles = {
     cardStyle: {
         background: "#505d8c",
         margin: 5,
     },
 };
-const deleteItem = () => {};
+const deleteTeam = () => {};
 const TeamList = ({ teams, title }) => {
     if (!teams.length) {
         // console.log(teams.length, "teamslength");
@@ -39,8 +42,8 @@ const TeamList = ({ teams, title }) => {
                                 <Link className="btn btn-block btn-squared btn-light text-dark" to={`/teams/${team._id}`}>
                                     View and add their items.
                                 </Link>
-                                <Link className="btn btn-block btn-squared btn-light text-dark" onClick={deleteItem}>
-                                    Delete Items
+                                <Link className="btn btn-block btn-squared btn-light text-dark" onClick={deleteTeam}>
+                                    Delete
                                 </Link>
                             </div>
                         </div>
