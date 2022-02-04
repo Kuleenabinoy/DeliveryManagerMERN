@@ -50,3 +50,12 @@ export const ADD_USER = gql`
         }
     }
 `;
+export const REMOVE_ITEM = gql`
+    mutation removeItem($item: String!) {
+        removeItem(item: $item) {
+            _id
+            name
+            items
+        }
+    }
+`;

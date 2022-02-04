@@ -1,4 +1,5 @@
 import React from "react";
+
 // Import Link component for all internal application hyperlinks
 import { Link } from "react-router-dom";
 const styles = {
@@ -7,6 +8,7 @@ const styles = {
         margin: 5,
     },
 };
+const deleteItem = () => {};
 const TeamList = ({ teams, title }) => {
     if (!teams.length) {
         // console.log(teams.length, "teamslength");
@@ -36,6 +38,9 @@ const TeamList = ({ teams, title }) => {
                                 {/* Use <Link> component to create an internal hyperlink reference. Use `to` prop to set the path instead of `href` */}
                                 <Link className="btn btn-block btn-squared btn-light text-dark" to={`/teams/${team._id}`}>
                                     View and add their items.
+                                </Link>
+                                <Link className="btn btn-block btn-squared btn-light text-dark" onClick={deleteItem}>
+                                    Delete Items
                                 </Link>
                             </div>
                         </div>

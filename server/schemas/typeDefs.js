@@ -24,7 +24,9 @@ const typeDefs = gql`
     type Query {
         users: [User]
         user(username: String!, usercategory: String!): User
-        teams: [Team]!
+
+        teams(username: String): [Team]
+
         team(teamId: ID!): Team
         me: User
     }

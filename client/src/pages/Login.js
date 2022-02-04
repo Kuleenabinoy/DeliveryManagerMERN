@@ -30,7 +30,7 @@ const Login = (props) => {
 
             Auth.login(data.login.token);
             if (data.login.user.usercategory === "employee") {
-                window.location.assign("/profile");
+                window.location.assign("/employee");
             } else {
                 window.location.assign("/admin");
             }

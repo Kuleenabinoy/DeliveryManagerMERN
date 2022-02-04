@@ -1,6 +1,7 @@
 import React from "react";
-import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from "@apollo/client";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { setContext } from "@apollo/client/link/context";
 
 import Home from "./pages/Home";
 import Team from "./pages/Team";
@@ -8,12 +9,25 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Profile from "./pages/Profile";
+import Employee from "./pages/Employee";
 import Email from "./pages/Email";
+//import ProfileForm from "./components/ProfileForm";
 //import HomeEmployee from "./pages/HomeEmployee";
 
-const client = new ApolloClient({
+const authLink = setContext((_, { headers }) => {
+    const token = localStorage.getItem("id_token");
+    return {
+        headers: {
+            ...headers,
+            authorization: token ? `Bearer ${token}` : "",
+        },
+    };
+});
+const httpLink = createHttpLink({
     uri: "/graphql",
+});
+const client = new ApolloClient({
+    link: authLink.concat(httpLink),
     cache: new InMemoryCache(),
 });
 
@@ -41,15 +55,16 @@ function App() {
                         <Route exact path="/logout">
                             <Login />
                         </Route>
-                        {/* <Route exact path="/employee">
-                            <HomeEmployee />
-                        </Route> */}
-                        <Route exact path="/profile">
-                            <Profile />
+                        <Route exact path="/employee">
+                            <Employee />
                         </Route>
                         <Route exact path="/me">
-                            <Profile />
+                            <Employee />
                         </Route>
+                        <Route exact path="/employee/:username">
+                            <Employee />
+                        </Route>
+
                         <Route exact path="/email">
                             <Email />
                         </Route>
