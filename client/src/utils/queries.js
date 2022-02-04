@@ -35,9 +35,8 @@ export const QUERY_USER = gql`
             usercategory
             teams {
                 _id
-                siteinfo
+                siteInfo
                 createdAt
-
                 items
             }
         }
@@ -52,7 +51,7 @@ export const QUERY_ME = gql`
             usercategory
             teams {
                 _id
-                siteinfo
+                siteInfo
                 createdAt
                 items
             }
