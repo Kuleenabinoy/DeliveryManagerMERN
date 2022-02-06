@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import ItemsList from "../components/ItemsList";
 import ItemForm from "../components/ItemForm";
-
+import { MailOutlined } from "@ant-design/icons";
 import { QUERY_SINGLE_TEAM } from "../utils/queries";
 
 const Team = () => {
@@ -42,13 +42,19 @@ const Team = () => {
 
             {team.items?.length > 0 && <ItemsList items={team.items} />}
 
-            <div className="my-4 p-4" style={{ border: "1px dotted #1a1a1a" }}>
+            <div
+                className="my-4 p-4"
+                //  style={{ border: "1px dotted #1a1a1a" }}
+            >
                 <ItemForm teamId={team._id} />
             </div>
             <div className="col-12 col-lg-9 ">
                 <div className="email">
                     <button className="btn btn-info  py-3" style={styles.btnStyle} onClick={emailForm}>
-                        Email Customer and DeliveryPerson
+                        <MailOutlined /> Email Customer and Employee
+                    </button>
+                    <button className="btn btn-info  py-3" style={styles.btnStyle} onClick={emailForm}>
+                        <MailOutlined /> Generate PDF
                     </button>
                 </div>
             </div>

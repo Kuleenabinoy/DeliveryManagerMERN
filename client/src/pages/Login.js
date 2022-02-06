@@ -40,14 +40,14 @@ const Login = (props) => {
 
         // clear form values
         setFormState({
-            usercategory: "",
-            email: "",
-            password: "",
+            usercategory: " ",
+            email: " ",
+            password: " ",
         });
     };
 
     return (
-        <main className="flex-row justify-center mb-4">
+        <main className="flex-col justify-center mb-4">
             <div className="col-12 col-lg-10">
                 <div className="card">
                     <h4 className="card-header bg-dark text-light p-2">Login</h4>
@@ -86,7 +86,7 @@ const Login = (props) => {
                                     value={formState.password}
                                     onChange={handleChange}
                                 />
-                                <button className="btn btn-block btn-info" style={{ cursor: "pointer" }} type="submit">
+                                <button className="btn btn-block " style={{ cursor: "pointer" }} type="submit">
                                     Submit
                                 </button>
                             </form>

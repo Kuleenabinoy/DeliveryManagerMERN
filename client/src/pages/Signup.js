@@ -26,6 +26,7 @@ const Signup = () => {
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
+
         console.log(formState, "signup values");
 
         try {
@@ -64,14 +65,6 @@ const Signup = () => {
                                     <option value="employee">Employee</option>
                                 </select>
 
-                                {/* <input
-                                    className="form-input"
-                                    placeholder="Employee Category"
-                                    name="usercategory"
-                                    type="text"
-                                    value={formState.value}
-                                    onChange={handleChange}
-                                /> */}
                                 <label>UserName</label>
                                 <input
                                     className="form-input"
