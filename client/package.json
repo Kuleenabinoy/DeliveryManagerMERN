@@ -4,6 +4,7 @@
     "private": true,
     "proxy": "http://localhost:3001",
     "dependencies": {
+        "@ant-design/icons": "^4.7.0",
         "@apollo/client": "^3.3.5",
         "@emailjs/browser": "^3.4.0",
         "@testing-library/jest-dom": "^5.16.1",

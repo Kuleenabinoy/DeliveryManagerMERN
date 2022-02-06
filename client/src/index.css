@@ -1708,3 +1708,9 @@ label form [type="radio"] {
 .btn {
     background: #505d8c;
 }
+.btn:hover {
+    color: blueviolet;
+}
+span {
+    align-items: flex-end;
+}
