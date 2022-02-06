@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Auth from "../../utils/auth";
 import { LoginOutlined } from "@ant-design/icons";
 import { LogoutOutlined, UserAddOutlined } from "@ant-design/icons";
+
 const styles = {
     headerStyle: {
         background: "#505d8c",
@@ -20,9 +21,9 @@ const styles = {
         color: "black",
         margin: 5,
     },
-    // spanStyle: {
-    //     margin: 10,
-    // },
+    spanStyle: {
+        margin: 15,
+    },
 };
 const Header = () => {
     const logout = (event) => {
@@ -41,11 +42,10 @@ const Header = () => {
                     <h1 className="heading" style={styles.headingStyle}>
                         Delivery Manager
                     </h1>
-                    {/* <h1>
-                        <span style={styles.spanStyle}>Naf-Supplies</span>
-                    </h1> */}
                 </Link>
-
+                {/* <h3>
+                    <span style={styles.spanStyle}>Naf-Supplies</span>
+                </h3> */}
                 <div>
                     {/* {console.log("Auth.getProfile().data", Auth.getProfile().data)} */}
                     {Auth.loggedIn() ? (
