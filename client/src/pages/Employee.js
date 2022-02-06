@@ -14,7 +14,7 @@ const Employee = () => {
     const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
         variables: { username: user.username },
     });
-    debugger;
+
     console.log("username", user.username);
 
     console.log("data", data);

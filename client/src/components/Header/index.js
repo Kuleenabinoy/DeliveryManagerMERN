@@ -2,15 +2,27 @@ import React from "react";
 // Import React Router Link component for internal hyperlinks
 import { Link } from "react-router-dom";
 import Auth from "../../utils/auth";
+import { LoginOutlined } from "@ant-design/icons";
+import { LogoutOutlined, UserAddOutlined } from "@ant-design/icons";
 const styles = {
     headerStyle: {
         background: "#505d8c",
         margin: 5,
     },
     headingStyle: {
-        align: "left",
-        margin: 20,
+        //align: "left",
+        margin: "10px",
+        padding: "10px",
     },
+    btnStyle: {
+        background: "#505d8c",
+        cursor: "pointer",
+        color: "black",
+        margin: 5,
+    },
+    // spanStyle: {
+    //     margin: 10,
+    // },
 };
 const Header = () => {
     const logout = (event) => {
@@ -21,13 +33,17 @@ const Header = () => {
     return (
         // <header className="bg-info text-dark mb-4 py-3 display-flex align-center">
         <header style={styles.headerStyle} className="header">
-            <div style={styles.headingStyle} className="heading">
+            <div>
                 {/* <div className="container flex-column justify-space-between-lg justify-center align-center text-center"> */}
                 {/* Use Link component to create a link that returns to the homepage on click */}
-                <Link className="text-dark" to="/">
-                    <h1 className="m-0" style={{ fontSize: "2rem" }}>
+                <Link className=" text-dark" to="/">
+                    {/* <h1 className="m-0" style={{ fontSize: "2rem" }}> */}
+                    <h1 className="heading" style={styles.headingStyle}>
                         Delivery Manager
                     </h1>
+                    {/* <h1>
+                        <span style={styles.spanStyle}>Naf-Supplies</span>
+                    </h1> */}
                 </Link>
 
                 <div>
@@ -38,27 +54,25 @@ const Header = () => {
                                 {Auth.getProfile().data.username}'s profile
                             </Link> */}
                             {Auth.getProfile().data.usercategory === "manager" ? (
-                                <Link className="btn btn-lg btn-info m-2" to="/signup">
-                                    Add profiles
+                                <Link style={styles.btnStyle} className="btn btn-lg btn-info m-2" to="/signup">
+                                    <UserAddOutlined /> Add profiles
                                 </Link>
                             ) : (
                                 ""
                             )}
-                            <button className="btn btn-lg btn-light m-2" onClick={logout}>
-                                Logout
+                            <button style={styles.btnStyle} className="btn btn-lg btn-info m-2 " onClick={logout}>
+                                <LogoutOutlined /> Logout
                             </button>
                         </>
                     ) : (
                         <>
-                            <Link className="btn btn-lg btn-info m-2" to="/login">
-                                Login
+                            <Link style={styles.btnStyle} className="btn btn-lg btn-info m-2" to="/login">
+                                <LoginOutlined /> Login
                             </Link>
-                            <Link className="btn btn-lg btn-info m-2" to="/logout">
-                                Logout
+
+                            <Link style={styles.btnStyle} className="btn  btn-lg btn-info m-2" to="/logout">
+                                <LogoutOutlined /> Logout
                             </Link>
-                            {/* <Link className="btn btn-lg btn-light m-2" to="/signup">
-                                Signup
-                            </Link> */}
                         </>
                     )}
                 </div>

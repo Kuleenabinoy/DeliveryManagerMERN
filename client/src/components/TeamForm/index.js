@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
-
+import { TeamOutlined } from "@ant-design/icons";
 import { ADD_TEAM } from "../../utils/mutations";
 import { QUERY_TEAMS } from "../../utils/queries";
 //if admin login show this form
@@ -81,6 +81,7 @@ const TeamForm = () => {
                 <div className="col-12 col-lg-3">
                     <button style={styles.btnStyle} className="btn btn-info btn-block py-3" type="submit">
                         Add Employee
+                        <TeamOutlined />
                     </button>
                 </div>
                 {error && <div className="col-12 my-3 bg-danger text-white p-3">Something went wrong...</div>}

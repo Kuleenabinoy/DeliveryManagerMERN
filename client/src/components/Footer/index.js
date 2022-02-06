@@ -1,6 +1,7 @@
 import React from "react";
 // Import hooks from React Router
 import { useLocation, useHistory } from "react-router-dom";
+import { CopyrightOutlined, StepBackwardOutlined } from "@ant-design/icons";
 
 const Footer = () => {
     // We retrieve the current `location` object data from React Router
@@ -12,14 +13,16 @@ const Footer = () => {
             <div className="container text-center mb-5">
                 {location.pathname !== "/" && (
                     <button
-                        className="btn btn-dark mb-3"
+                        className="btn  mb-3"
                         // Go back to the previous page in our browser's history
                         onClick={() => history.goBack()}
                     >
-                        &larr; Go Back
+                        <StepBackwardOutlined /> Go Back
                     </button>
                 )}
-                <h4>&copy; {new Date().getFullYear()} - Delivery Manager</h4>
+                <h4>
+                    <CopyrightOutlined /> {new Date().getFullYear()} -Naf Delivery Manager
+                </h4>
             </div>
         </footer>
     );
