@@ -1711,6 +1711,7 @@ label form [type="radio"] {
 .btn:hover {
     color: blueviolet;
 }
-span {
-    align-items: flex-end;
+.heading {
+    font-family: "Lobster", cursive;
+    font-size: 45px;
 }
