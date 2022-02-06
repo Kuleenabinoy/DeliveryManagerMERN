@@ -2,6 +2,12 @@ import React from "react";
 import { useMutation } from "@apollo/client";
 import { REMOVE_ITEM } from "../../utils/mutations";
 import { QUERY_ME } from "../../utils/queries";
+import { DeleteOutlined } from "@ant-design/icons";
+const styles = {
+    btnstyle: {
+        padding: 4,
+    },
+};
 const ItemsList = ({ items }) => {
     const [removeItem, { error }] = useMutation(REMOVE_ITEM, {
         update(cache, { data: { removeItem } }) {
@@ -36,12 +42,13 @@ const ItemsList = ({ items }) => {
                         <div key={item} className=" col-12 col-xl-6">
                             <div className="card mb-3">
                                 <h4 className=" card-header  text-light p-2 m-0">
-                                    {item} <br />
+                                    {item}
                                     <button
+                                        style={styles.btnstyle}
                                         className="btn btn-sm btn-danger ml-auto"
                                         onClick={() => handleRemoveItem(item)}
                                     >
-                                        Delete
+                                        <DeleteOutlined />
                                     </button>
                                 </h4>
                             </div>

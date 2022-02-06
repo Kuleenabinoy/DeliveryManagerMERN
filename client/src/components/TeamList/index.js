@@ -4,7 +4,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 //import { useMutation } from "@apollo/client";
 //import { QUERY_TEAMS } from "../../utils/queries";
-
+import { DeleteOutlined, DownSquareOutlined } from "@ant-design/icons";
 const styles = {
     cardStyle: {
         background: "#505d8c",
@@ -41,9 +41,10 @@ const TeamList = ({ teams, title }) => {
                                 {/* Use <Link> component to create an internal hyperlink reference. Use `to` prop to set the path instead of `href` */}
                                 <Link className="btn btn-block btn-squared btn-light text-dark" to={`/teams/${team._id}`}>
                                     View and add their items.
+                                    <DownSquareOutlined />
                                 </Link>
                                 <Link className="btn btn-block btn-squared btn-light text-dark" onClick={deleteTeam}>
-                                    Delete
+                                    Delete <DeleteOutlined />
                                 </Link>
                             </div>
                         </div>
