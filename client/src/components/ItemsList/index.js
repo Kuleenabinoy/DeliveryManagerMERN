@@ -1,7 +1,7 @@
 import React from "react";
 import { useMutation } from "@apollo/client";
 import { REMOVE_ITEM } from "../../utils/mutations";
-import { QUERY_ME } from "../../utils/queries";
+import { QUERY_TEAMS } from "../../utils/queries";
 import { DeleteOutlined } from "@ant-design/icons";
 const styles = {
     btnstyle: {
@@ -11,9 +11,10 @@ const styles = {
 const ItemsList = ({ items }) => {
     const [removeItem, { error }] = useMutation(REMOVE_ITEM, {
         update(cache, { data: { removeItem } }) {
+            //remove item not working
             try {
                 cache.writeQuery({
-                    query: QUERY_ME,
+                    query: QUERY_TEAMS, //Not Query_me because manger is removing
                     data: { me: removeItem },
                 });
             } catch (e) {
@@ -21,6 +22,11 @@ const ItemsList = ({ items }) => {
             }
         },
     });
+    // const ItemsList = ({ items }) => {
+    //     if (!items.length) {
+    //         return <h3>No Items Added</h3>;
+    //     }
+
     const handleRemoveItem = async (item) => {
         try {
             const { data } = await removeItem({
@@ -43,6 +49,7 @@ const ItemsList = ({ items }) => {
                             <div className="card mb-3">
                                 <h4 className=" card-header  text-light p-2 m-0">
                                     {item}
+
                                     <button
                                         style={styles.btnstyle}
                                         className="btn btn-sm btn-danger ml-auto"
