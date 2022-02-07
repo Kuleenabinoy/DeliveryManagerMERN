@@ -15,7 +15,7 @@ const typeDefs = gql`
         useremail: String
         usercategory: String
         password: String
-        teams: [Team]!
+        teams: [Team]
     }
     type Auth {
         token: ID!
@@ -35,7 +35,7 @@ const typeDefs = gql`
         addTeam(name: String!, siteInfo: String!, email: String!): Team
         addItem(teamId: ID!, item: String!): Team
         removeTeam(teamId: ID!): Team
-        removeItem(teamId: ID!, item: String!): Team
+        removeItem(item: String!): Team
     }
 `;
 

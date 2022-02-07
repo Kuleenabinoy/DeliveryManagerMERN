@@ -40,7 +40,7 @@ const Team = () => {
             <h2 className="card-header">Deliver to {team.siteInfo}</h2>
             <h2 className="card-header">{team.name}'s items to pick from warehouse...</h2>
 
-            {team.items?.length > 0 && <ItemsList items={team.items} />}
+            {team.items?.length > 0 && <ItemsList items={team.items} isLoggedInUser={!teamId && true} />}
 
             <div
                 className="my-4 p-4"

@@ -10,7 +10,7 @@ const resolvers = {
         user: async (parent, { username }) => {
             return User.findOne({ username }).populate("teams");
         },
-        //changes happing  in this query  to get single employee
+        //changes made  in this query  to get single employee
         teams: async (parent, { username }) => {
             const params = username ? { username } : {};
             return Team.find(params);
@@ -19,6 +19,7 @@ const resolvers = {
         team: async (parent, { teamId }) => {
             return Team.findOne({ _id: teamId });
         },
+
         me: async (root, args, context) => {
             if (context.user) {
                 return User.findOne({ _id: context.user._id }).populate("teams");
@@ -29,7 +30,13 @@ const resolvers = {
             throw new AuthenticationError("You need to be logged in!");
         },
     },
-
+    // User: {
+    //     teams(parent) {
+    //         return Team.find({
+    //             _id: parent.teams,
+    //         });
+    //     },
+    // },
     Mutation: {
         addUser: async (parent, { username, useremail, usercategory, password }) => {
             const user = await User.create({ username, useremail, usercategory, password });
@@ -76,8 +83,14 @@ const resolvers = {
         // removeItem: async (parent, { teamId, item }) => {
         //     return Team.findOneAndUpdate({ _id: teamId }, { $pull: { items: item } }, { new: true });
         // },
-        removeItem: async (parent, { teamId, item }) => {
-            return Team.findOneAndUpdate({ _id: teamId }, { $pull: { items: item } }, { new: true });
+        async removeTeam(parent, { teamId }) {
+            return await Team.findByIdAndRemove(teamId);
+        },
+        removeItem: async (parent, { item }, context) => {
+            if (context.user) {
+                return Team.findOneAndUpdate({ _id: context.user._id }, { $pull: { items: item } }, { new: true });
+            }
+            throw new AuthenticationError(" You need to be logged in!");
         },
     },
 };
