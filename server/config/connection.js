@@ -6,5 +6,4 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Delivery-Team",
     useCreateIndex: true,
     useFindAndModify: false,
 });
-
 module.exports = mongoose.connection;
