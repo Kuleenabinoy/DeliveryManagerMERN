@@ -17,6 +17,7 @@ const server = new ApolloServer({
 });
 
 server.applyMiddleware({ app });
+//TESt
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
