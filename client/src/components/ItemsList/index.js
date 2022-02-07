@@ -1,41 +1,42 @@
 import React from "react";
-import { useMutation } from "@apollo/client";
-import { REMOVE_ITEM } from "../../utils/mutations";
-import { QUERY_TEAMS } from "../../utils/queries";
+//import { useMutation } from "@apollo/client";
+//import { REMOVE_ITEM } from "../../utils/mutations";
+//import { QUERY_SINGLE_TEAM } from "../../utils/queries";
 import { DeleteOutlined } from "@ant-design/icons";
 const styles = {
     btnstyle: {
         padding: 4,
     },
 };
-const ItemsList = ({ items }) => {
-    const [removeItem, { error }] = useMutation(REMOVE_ITEM, {
-        update(cache, { data: { removeItem } }) {
-            //remove item not working
-            try {
-                cache.writeQuery({
-                    query: QUERY_TEAMS, //Not Query_me because manger is removing
-                    data: { me: removeItem },
-                });
-            } catch (e) {
-                console.error(e);
-            }
-        },
-    });
-    // const ItemsList = ({ items }) => {
-    //     if (!items.length) {
-    //         return <h3>No Items Added</h3>;
-    //     }
+// const ItemsList = ({ items }) => {
+//     const [removeItem, { error }] = useMutation(REMOVE_ITEM, {
+//         update(cache, { data: { removeItem } }) {
+//             //remove item not working
 
-    const handleRemoveItem = async (item) => {
-        try {
-            const { data } = await removeItem({
-                variables: { item },
-            });
-        } catch (err) {
-            console.error(err);
-        }
-    };
+//             try {
+//                 cache.writeQuery({
+//                     //  query: QUERY_SINGLE_TEAM, //Not Query_me because manger is removing
+//                     //       data: { removeItem },
+//                 });
+//             } catch (e) {
+//                 console.error(e);
+//             }
+//         },
+//     });
+const ItemsList = ({ items }) => {
+    if (!items.length) {
+        return <h3>No Items Added</h3>;
+    }
+
+    // const handleRemoveItem = async (item) => {
+    //     try {
+    //         const { data } = await removeItem({
+    //             variables: { item },
+    //         });
+    //     } catch (err) {
+    //         console.error(err);
+    //     }
+    // };
     if (!items.length) {
         return <h3>No Items Yet</h3>;
     }
@@ -53,7 +54,7 @@ const ItemsList = ({ items }) => {
                                     <button
                                         style={styles.btnstyle}
                                         className="btn btn-sm btn-danger ml-auto"
-                                        onClick={() => handleRemoveItem(item)}
+                                        // onClick={() => handleRemoveItem(item)}
                                     >
                                         <DeleteOutlined />
                                     </button>

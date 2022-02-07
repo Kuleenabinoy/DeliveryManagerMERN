@@ -39,6 +39,7 @@ const resolvers = {
     // },
     Mutation: {
         addUser: async (parent, { username, useremail, usercategory, password }) => {
+            //usercategory=manager
             const user = await User.create({ username, useremail, usercategory, password });
             const token = signToken(user);
             return { token, user };
@@ -86,11 +87,11 @@ const resolvers = {
         async removeTeam(parent, { teamId }) {
             return await Team.findByIdAndRemove(teamId);
         },
-        removeItem: async (parent, { item }, context) => {
-            if (context.user) {
-                return Team.findOneAndUpdate({ _id: context.user._id }, { $pull: { items: item } }, { new: true });
-            }
-            throw new AuthenticationError(" You need to be logged in!");
+        removeItem: async (parent, { teamId, item }) => {
+            // console.log("here");
+            //const aa = await Team.findById({ _id: teamId });
+            //console.log("aa", aa);
+            return Team.findOneAndUpdate({ _id: teamId }, { $pull: { items: item } }, { new: true });
         },
     },
 };
