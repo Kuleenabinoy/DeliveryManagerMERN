@@ -19,7 +19,7 @@ const Email = () => {
     const textAreaEl = useRef();
     const [errorMessage, setErrorMessage] = useState("");
     function handleChange(e) {
-        if (e.target.name === "email" || (e.target.name = "email2") || e.target.name === "manageremail") {
+        if (e.target.name === "email" || (e.target.name = "email2") || e.target.name === "email3") {
             const isValid = validateEmail(e.target.value);
 
             if (!isValid) {
@@ -70,7 +70,7 @@ const Email = () => {
             </div>
             <form
                 style={{ border: "2px dotted #1a1a1a" }}
-                className=" flex-row justify-center justify-space-between-md align-center "
+                className=" flex-row justify-center justify-space-between-md align-center  "
                 ref={form}
                 onSubmit={sendEmail}
             >
@@ -113,7 +113,7 @@ const Email = () => {
                         className="form-input w-50"
                         placeholder="Manager Email"
                         type="email"
-                        name="manageremail"
+                        name="email3"
                         onBlur={handleChange}
                     />
                 </div>
@@ -121,11 +121,7 @@ const Email = () => {
                     <label>Phone</label>
                     <input className="form-input w-50" placeholder="Phone" type="text" name="phone" />{" "}
                 </div>
-                <div className="col-12 col-lg-9">
-                    <label>Code</label>
 
-                    <textarea className="form-input w-50" ref={textAreaEl} name="code" />
-                </div>
                 <div className="col-12 col-lg-9">
                     <label>Items </label>
                     <textarea placeholder="Items for delivery" className="form-input w-50" name="items" />
@@ -133,6 +129,12 @@ const Email = () => {
                 <div className="col-12 col-lg-9">
                     <label>Site Address </label>
                     <textarea className="form-input w-50" placeholder="Site Address" name="siteaddress" />
+                </div>
+
+                <div className="col-12 col-lg-9">
+                    <label>Code</label>
+
+                    <textarea className="form-input w-50" ref={textAreaEl} name="code" />
                 </div>
                 <div className="col-12 col-lg-3">
                     <input style={styles.btnStyle} className="btn btn-info  py-3" type="submit" value="Send" />
