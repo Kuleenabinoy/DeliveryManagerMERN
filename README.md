@@ -10,16 +10,24 @@ Improved relationships with customers.
 
 ## User Story
 
-Manager Of Delivery Department  
- --- Contactless Paperless Delivery  
- --- Add Employees And Managers in Team
---- Schedule Items for Delivery, with Site Information
---- Email Customer About Delivery with Secret Code
---- Edit ,Delete Items & Employee Profile _
---- Track Delivery , Employee _
-Delivery Team Members.
---- Items scheduled for delivery for them.
---- Confirm Delivery by checking the code
+As Manager Of Delivery Department  
+ Contactless Paperless Delivery
+
+              Add Employees And Managers in Team
+
+              Schedule Items for Delivery, with Site Information
+
+              Email Customer About Delivery with Secret Code
+
+              Edit ,Delete Items & Employee Profile  (Future Development)
+
+              Track Delivery , Employee (Future Development)
+
+As Delivery Team Members.
+
+                Items scheduled for delivery for them.
+
+                Confirm Delivery by checking the code
 
 ## Table of Contents
 
@@ -37,15 +45,28 @@ use npm i to install dependencies
 
 Use
 username manager@naf.com
+
 password manager1234
+
 to login as a manager
 
 Use
 username abc@naf.com
+
 password abc1234
+
 to login as employee
 
 ## Usage
+
+MERN STACK -SINGLE PAGE APPLICATION
+FRONT END : React
+DATABASE : Mongo Db
+API: Graph QL for API s
+CSS : Custom CSS ,Normalize,Bootstrap
+Email Js
+AntDesign
+Appolo
 
 ## ScreenShots
 
