@@ -10,8 +10,9 @@ Improved relationships with customers.
 
 ## User Story
 
-As Manager Of Delivery Department  
- Contactless Paperless Delivery
+As Manager Of Delivery Department
+
+              Contactless Paperless Delivery
 
               Add Employees And Managers in Team
 
@@ -43,29 +44,34 @@ As Delivery Team Members.
 
 use npm i to install dependencies
 
-Use
-username manager@naf.com
+To Login as Manager
 
-password manager1234
+       username manager@naf.com
 
-to login as a manager
+       password manager1234
 
-Use
-username abc@naf.com
+To Login as Employee of Team
 
-password abc1234
+       username abc@naf.com
 
-to login as employee
+       password abc1234
 
 ## Usage
 
 MERN STACK -SINGLE PAGE APPLICATION
+
 FRONT END : React
+
 DATABASE : Mongo Db
+
 API: Graph QL for API s
+
 CSS : Custom CSS ,Normalize,Bootstrap
+
 Email Js
+
 AntDesign
+
 Appolo
 
 ## ScreenShots
@@ -82,5 +88,7 @@ Heroku:
 https://deliverymanger22.herokuapp.com/
 
 ## Questions
+
+Application developed in a 2 week time frame as final project for Coding bootcamp. Developments are still going on to meet all client requirments .
 
 If you have any questions please free to contact Kuleena @annachandy123@gmail.com
