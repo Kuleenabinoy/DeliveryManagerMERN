@@ -36,8 +36,8 @@ As Delivery Team Members.
 -   [UserStory](#UserStory)
 -   [Installation](#Installation)
 -   [Usage](#Usage)
--   [ScreenShots](#Screenshots)
 -   [Link](#Links)
+-   [ScreenShots](#Screenshots)
 -   [Questions](#Questions)
 
 ## Installation
@@ -74,12 +74,6 @@ AntDesign
 
 Appolo
 
-## ScreenShots
-
-![Screenshot 2022-02-10 11 12 21](https://user-images.githubusercontent.com/86656634/153312441-5dcd2df2-230a-4d3f-8e56-6cc2047cb443.png)
-![Screenshot 2022-02-10 11 12 45](https://user-images.githubusercontent.com/86656634/153312460-6f000786-775d-4710-bf8f-22179c0d146c.png)
-![Screenshot 2022-02-10 11 13 25](https://user-images.githubusercontent.com/86656634/153312468-1192b816-ed88-401c-85f2-4dd544525e85.png)
-
 ## Links:
 
 Github:
@@ -89,6 +83,12 @@ https://github.com/Kuleenabinoy/DeliveryManagerMERN
 Heroku:
 
 https://deliverymanger22.herokuapp.com/
+
+## ScreenShots
+
+![Screenshot 2022-02-10 11 12 21](https://user-images.githubusercontent.com/86656634/153312441-5dcd2df2-230a-4d3f-8e56-6cc2047cb443.png)
+![Screenshot 2022-02-10 11 12 45](https://user-images.githubusercontent.com/86656634/153312460-6f000786-775d-4710-bf8f-22179c0d146c.png)
+![Screenshot 2022-02-10 11 13 25](https://user-images.githubusercontent.com/86656634/153312468-1192b816-ed88-401c-85f2-4dd544525e85.png)
 
 ## Questions
 
