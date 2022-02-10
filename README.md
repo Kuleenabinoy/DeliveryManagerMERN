@@ -70,8 +70,6 @@ Appolo
 
 ## ScreenShots
 
-## Questions
-
 ## Links:
 
 Github:
@@ -79,3 +77,7 @@ https://github.com/Kuleenabinoy/DeliveryManagerMERN
 
 Heroku:
 https://deliverymanger22.herokuapp.com/
+
+## Questions
+
+If you have any questions please free to contact Kuleena @annachandy123@gmail.com
