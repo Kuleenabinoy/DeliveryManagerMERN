@@ -70,9 +70,9 @@ const Header = () => {
                                 <LoginOutlined /> Login
                             </Link>
 
-                            <Link style={styles.btnStyle} className="btn  btn-lg btn-info m-2" to="/logout">
+                            {/* <Link style={styles.btnStyle} className="btn  btn-lg btn-info m-2" to="/logout">
                                 <LogoutOutlined /> Logout
-                            </Link>
+                            </Link> */}
                         </>
                     )}
                 </div>
