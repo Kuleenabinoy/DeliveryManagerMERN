@@ -53,9 +53,6 @@ const Team = () => {
                     <button className="btn btn-info  py-3" style={styles.btnStyle} onClick={emailForm}>
                         <MailOutlined /> Email Customer and Employee
                     </button>
-                    <button className="btn   py-3" style={styles.btnStyle}>
-                        <MailOutlined /> Generate PDF
-                    </button>
                 </div>
             </div>
         </div>
