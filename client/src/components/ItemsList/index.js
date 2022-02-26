@@ -52,7 +52,7 @@ const ItemsList = ({ items }) => {
                             <div className="card mb-3">
                                 <h4 className="  card-header  text-light p-2 m-0">
                                     {item + "\t\t"}
-                                    <button
+                                    {/* <button
                                         style={styles.btnstyle}
                                         className="  btn btn-sm btn-danger  "
                                         // onClick={() => handleRemoveItem(item)}
@@ -65,7 +65,7 @@ const ItemsList = ({ items }) => {
                                         // onClick={() => handleEditItem(item)}
                                     >
                                         <EditOutlined />
-                                    </button>
+                                    </button> */}
                                 </h4>
                             </div>
                         </div>

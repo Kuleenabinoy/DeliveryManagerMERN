@@ -43,9 +43,9 @@ const TeamList = ({ teams, title }) => {
                                     View and add their items.
                                     <DownSquareOutlined />
                                 </Link>
-                                <Link className="btn btn-block btn-squared btn-light text-dark" onClick={deleteTeam}>
+                                {/* <Link className="btn btn-block btn-squared btn-light text-dark" onClick={deleteTeam}>
                                     Delete <DeleteOutlined />
-                                </Link>
+                                </Link> */}
                             </div>
                         </div>
                     ))}
